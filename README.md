@@ -23,3 +23,20 @@ Mail Service Dashboard
 ![GitHub Logo](/ReadmeImages/mail.png)
 
 This is the mail service dashboard, the no. of processed requests, currently executing requests and failed requests are displayed. 
+
+-------------------------------------
+Sql Service Dashboard
+-------------------------------------
+![GitHub Logo](/ReadmeImages/susql.png)
+
+This is a Sql Query Request dashborad, the Sql request are further sent to MySQL 8.0 Server, and the received response are sent to the client. 
+
+-------------------------------------
+Utility Dashboard
+-------------------------------------
+(/ReadmeImages/graph.png)
+
+In this window, the utility parameter are displayed such as:
+1. CPU Usage
+2. Network Usage
+3. RAM Usage
