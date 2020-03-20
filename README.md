@@ -9,8 +9,11 @@ This single server program handles multi-types of Service requests such as:
 4. Image Recognition Request
 
 
-
-Dashboard|
 -------------------------------------
-![GitHub Logo](/ReadmeImages/home.png)|
+Dashboard
+-------------------------------------
+![GitHub Logo](/ReadmeImages/home.png)
+
+
+
 
