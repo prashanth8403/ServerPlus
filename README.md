@@ -8,3 +8,8 @@ This single server program handles multi-types of Service requests such as:
 3. Text Message 
 4. Image Recognition Request
 
+
+
+The Dashboard of the Server.
+
+![GitHub Logo](/ReadmeImages/home.png)
