@@ -34,7 +34,7 @@ This is a Sql Query Request dashborad, the Sql request are further sent to MySQL
 -------------------------------------
 Utility Dashboard
 -------------------------------------
-(/ReadmeImages/graph.png)
+![GitHub Logo](/ReadmeImages/graph.png)
 
 In this window, the utility parameter are displayed such as:
 1. CPU Usage
