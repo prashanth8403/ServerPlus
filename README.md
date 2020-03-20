@@ -10,6 +10,7 @@ This single server program handles multi-types of Service requests such as:
 
 
 
-The Dashboard of the Server.
+Dashboard|
+-------------------------------------
+![GitHub Logo](/ReadmeImages/home.png)|
 
-![GitHub Logo](/ReadmeImages/home.png)
