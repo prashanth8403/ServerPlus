@@ -14,6 +14,12 @@ Dashboard
 -------------------------------------
 ![GitHub Logo](/ReadmeImages/home.png)
 
+The dashboard contains breif information, regarding the services and other network related information.
+the net network packets sent and received by the device is displayed at bottom-right.
 
+-------------------------------------
+Mail Service Dashboard
+-------------------------------------
+![GitHub Logo](/ReadmeImages/mail.png)
 
-
+This is the mail service dashboard, the no. of processed requests, currently executing requests and failed requests are displayed. 
