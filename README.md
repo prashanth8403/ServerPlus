@@ -1,4 +1,6 @@
-(Source code: coming soon....)
+As of now, the code is not much readable, hence comments will be added
+
+
 # MultiService-MultiThread-Server-using-C#
 A C# Conceptual MultiService Server Program, using TCP remote connection.
 This Server program is implemented in C# window form framework .Net 4.8
