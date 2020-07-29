@@ -1,5 +1,5 @@
 # ServerPlus+
-[![License](https://img.shields.io/badge/License-Mit&nbsp;&nbsp;&nbsp;-greeng)](https://opensource.org/licenses/Apache-2.0)
+[![License](https://img.shields.io/badge/License-Mit&nbsp;&nbsp;&nbsp;-greeng)](#)
 # MultiService-MultiThread-Server-using-C#
 A C# Conceptual MultiService Server Program, using TCP remote connection.
 This Server program is implemented in C# window form framework .Net 4.8
