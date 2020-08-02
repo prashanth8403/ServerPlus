@@ -100,7 +100,7 @@ namespace ServerPlus
 
         public void Atlas()
         {
-            Thread _mailthread = new Thread(MailProcess.MessageServer);
+            Thread _mailthread = new Thread(MailProcess.MailServer);
             _mailthread.Start();
         }
 

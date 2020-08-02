@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+        non-function code.
+        To be used in later versions.
+ */
+
+using System;
 using System.Net.Sockets;
 using System.Net;
 using System.Text;
@@ -13,7 +18,7 @@ namespace ServerPlus.ServerModule
         const string SERVER_IP = "192.168.43.25";
         string SERVER_REQUEST_STRING;
 
-        static void CreateSocket() 
+        static void CreateSocket()
         {
             IPAddress ServerAccess = IPAddress.Parse(SERVER_IP);
             TcpListener ServerListner = new TcpListener(ServerAccess, PORT_NO);
@@ -23,10 +28,10 @@ namespace ServerPlus.ServerModule
             NetworkStream nwStream = client.GetStream();
             byte[] buffer = new byte[client.ReceiveBufferSize];
             int bytesRead = nwStream.Read(buffer, 0, client.ReceiveBufferSize);
-            MailReceived = Encoding.ASCII.GetString(buffer, 0, bytesRead);
-            Console.WriteLine("Request $ " + SERVER_REQUEST_STRING);
-            Thread _emailthread = new Thread(SendMail);
-            _emailthread.Start();
+            //MailReceived = Encoding.ASCII.GetString(buffer, 0, bytesRead);
+            //Console.WriteLine("Request $ " + SERVER_REQUEST_STRING);
+            //Thread _emailthread = new Thread(SendMail);
+            //_emailthread.Start();
             byte[] bytesToSend = ASCIIEncoding.ASCII.GetBytes("1000");
             nwStream.Write(bytesToSend, 0, bytesToSend.Length);
             Utility.mailqueue++;
