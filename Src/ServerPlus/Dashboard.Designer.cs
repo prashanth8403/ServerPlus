@@ -32,16 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.atlas = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.minevra = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.juno = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.meridi = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.label8 = new System.Windows.Forms.Label();
             this.PacketSent = new System.Windows.Forms.Label();
             this.NetworkInterface = new System.Windows.Forms.Timer(this.components);
@@ -52,7 +44,13 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.PacketReceived = new System.Windows.Forms.Label();
+            this.MemoryProgress = new Bunifu.Framework.UI.BunifuCircleProgressbar();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.CPUProgress = new Bunifu.Framework.UI.BunifuCircleProgressbar();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -76,39 +74,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(85, 617);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 24);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "ATLAS";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(333, 624);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 24);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "JUNO";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(320, 710);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 24);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "MERIDI";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -130,101 +95,6 @@
             this.label6.Size = new System.Drawing.Size(148, 37);
             this.label6.TabIndex = 6;
             this.label6.Text = "RUNNING";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(54, 710);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 24);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "MINEVRA";
-            // 
-            // atlas
-            // 
-            this.atlas.animated = true;
-            this.atlas.animationIterval = 10;
-            this.atlas.animationSpeed = 25;
-            this.atlas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(25)))), ((int)(((byte)(31)))));
-            this.atlas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("atlas.BackgroundImage")));
-            this.atlas.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.atlas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(25)))), ((int)(((byte)(31)))));
-            this.atlas.LabelVisible = true;
-            this.atlas.LineProgressThickness = 8;
-            this.atlas.LineThickness = 8;
-            this.atlas.Location = new System.Drawing.Point(175, 599);
-            this.atlas.MaxValue = 100;
-            this.atlas.Name = "atlas";
-            this.atlas.ProgressBackColor = System.Drawing.Color.Transparent;
-            this.atlas.ProgressColor = System.Drawing.Color.Crimson;
-            this.atlas.Size = new System.Drawing.Size(60, 60);
-            this.atlas.TabIndex = 9;
-            this.atlas.Value = 85;
-            // 
-            // minevra
-            // 
-            this.minevra.animated = true;
-            this.minevra.animationIterval = 10;
-            this.minevra.animationSpeed = 17;
-            this.minevra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(25)))), ((int)(((byte)(31)))));
-            this.minevra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("minevra.BackgroundImage")));
-            this.minevra.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minevra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(25)))), ((int)(((byte)(31)))));
-            this.minevra.LabelVisible = true;
-            this.minevra.LineProgressThickness = 8;
-            this.minevra.LineThickness = 8;
-            this.minevra.Location = new System.Drawing.Point(177, 683);
-            this.minevra.MaxValue = 100;
-            this.minevra.Name = "minevra";
-            this.minevra.ProgressBackColor = System.Drawing.Color.Transparent;
-            this.minevra.ProgressColor = System.Drawing.Color.DodgerBlue;
-            this.minevra.Size = new System.Drawing.Size(60, 60);
-            this.minevra.TabIndex = 10;
-            this.minevra.Value = 85;
-            // 
-            // juno
-            // 
-            this.juno.animated = true;
-            this.juno.animationIterval = 10;
-            this.juno.animationSpeed = 15;
-            this.juno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(25)))), ((int)(((byte)(31)))));
-            this.juno.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("juno.BackgroundImage")));
-            this.juno.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.juno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(25)))), ((int)(((byte)(31)))));
-            this.juno.LabelVisible = true;
-            this.juno.LineProgressThickness = 8;
-            this.juno.LineThickness = 8;
-            this.juno.Location = new System.Drawing.Point(435, 599);
-            this.juno.MaxValue = 100;
-            this.juno.Name = "juno";
-            this.juno.ProgressBackColor = System.Drawing.Color.Transparent;
-            this.juno.ProgressColor = System.Drawing.Color.OrangeRed;
-            this.juno.Size = new System.Drawing.Size(60, 60);
-            this.juno.TabIndex = 11;
-            this.juno.Value = 85;
-            // 
-            // meridi
-            // 
-            this.meridi.animated = true;
-            this.meridi.animationIterval = 10;
-            this.meridi.animationSpeed = 18;
-            this.meridi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(25)))), ((int)(((byte)(31)))));
-            this.meridi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("meridi.BackgroundImage")));
-            this.meridi.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.meridi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(25)))), ((int)(((byte)(31)))));
-            this.meridi.LabelVisible = true;
-            this.meridi.LineProgressThickness = 8;
-            this.meridi.LineThickness = 8;
-            this.meridi.Location = new System.Drawing.Point(435, 683);
-            this.meridi.MaxValue = 100;
-            this.meridi.Name = "meridi";
-            this.meridi.ProgressBackColor = System.Drawing.Color.Transparent;
-            this.meridi.ProgressColor = System.Drawing.Color.DeepPink;
-            this.meridi.Size = new System.Drawing.Size(60, 60);
-            this.meridi.TabIndex = 12;
-            this.meridi.Value = 85;
             // 
             // label8
             // 
@@ -330,12 +200,80 @@
             this.PacketReceived.TabIndex = 22;
             this.PacketReceived.Text = "0.0";
             // 
+            // MemoryProgress
+            // 
+            this.MemoryProgress.animated = false;
+            this.MemoryProgress.animationIterval = 5;
+            this.MemoryProgress.animationSpeed = 300;
+            this.MemoryProgress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(25)))), ((int)(((byte)(31)))));
+            this.MemoryProgress.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MemoryProgress.BackgroundImage")));
+            this.MemoryProgress.Font = new System.Drawing.Font("Roboto Light", 13.8F);
+            this.MemoryProgress.ForeColor = System.Drawing.Color.DeepPink;
+            this.MemoryProgress.LabelVisible = true;
+            this.MemoryProgress.LineProgressThickness = 10;
+            this.MemoryProgress.LineThickness = 1;
+            this.MemoryProgress.Location = new System.Drawing.Point(407, 610);
+            this.MemoryProgress.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.MemoryProgress.MaxValue = 100;
+            this.MemoryProgress.Name = "MemoryProgress";
+            this.MemoryProgress.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.MemoryProgress.ProgressColor = System.Drawing.Color.DeepPink;
+            this.MemoryProgress.Size = new System.Drawing.Size(115, 115);
+            this.MemoryProgress.TabIndex = 25;
+            this.MemoryProgress.Value = 100;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(306, 610);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(109, 116);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 26;
+            this.pictureBox3.TabStop = false;
+            // 
+            // CPUProgress
+            // 
+            this.CPUProgress.animated = false;
+            this.CPUProgress.animationIterval = 5;
+            this.CPUProgress.animationSpeed = 300;
+            this.CPUProgress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(25)))), ((int)(((byte)(31)))));
+            this.CPUProgress.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CPUProgress.BackgroundImage")));
+            this.CPUProgress.Font = new System.Drawing.Font("Roboto Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPUProgress.ForeColor = System.Drawing.Color.Yellow;
+            this.CPUProgress.LabelVisible = true;
+            this.CPUProgress.LineProgressThickness = 10;
+            this.CPUProgress.LineThickness = 1;
+            this.CPUProgress.Location = new System.Drawing.Point(130, 610);
+            this.CPUProgress.Margin = new System.Windows.Forms.Padding(10);
+            this.CPUProgress.MaxValue = 100;
+            this.CPUProgress.Name = "CPUProgress";
+            this.CPUProgress.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.CPUProgress.ProgressColor = System.Drawing.Color.Yellow;
+            this.CPUProgress.Size = new System.Drawing.Size(115, 115);
+            this.CPUProgress.TabIndex = 24;
+            this.CPUProgress.Value = 100;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(34, 610);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(109, 116);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(25)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(1150, 800);
+            this.Controls.Add(this.MemoryProgress);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.CPUProgress);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.PacketReceived);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -345,16 +283,8 @@
             this.Controls.Add(this.NetworkDevice);
             this.Controls.Add(this.PacketSent);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.meridi);
-            this.Controls.Add(this.juno);
-            this.Controls.Add(this.minevra);
-            this.Controls.Add(this.atlas);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -363,6 +293,8 @@
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,16 +304,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar atlas;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar minevra;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar juno;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar meridi;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label PacketSent;
         private System.Windows.Forms.Timer NetworkInterface;
@@ -392,5 +316,9 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label PacketReceived;
+        private Bunifu.Framework.UI.BunifuCircleProgressbar MemoryProgress;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private Bunifu.Framework.UI.BunifuCircleProgressbar CPUProgress;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

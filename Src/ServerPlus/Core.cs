@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ServerPlus
@@ -15,7 +9,7 @@ namespace ServerPlus
     {
         private bool _dragging;
         private Point _offset;
-        
+
         private void Login_MouseMove(object sender, MouseEventArgs e)
         {
             if (_dragging)
@@ -46,44 +40,56 @@ namespace ServerPlus
 
         private void Performance_Click(object sender, EventArgs e)
         {
-            ControlPanel.Controls.Clear();
-            Performance _performance = new Performance();
-            _performance.TopLevel = false;
-            ControlPanel.Controls.Add(_performance);
-            _performance.Dock = DockStyle.Fill;
-            _performance.Show();
+            if (Utility.PerformanceClick == 0)
+            {
+                ControlPanel.Controls.Clear();
+                Performance _performance = new Performance();
+                _performance.TopLevel = false;
+                ControlPanel.Controls.Add(_performance);
+                _performance.Dock = DockStyle.Fill;
+                _performance.Show();
+                Utility.PerformanceClick = 1;
+                Utility.HomeClick = 0;
+                Utility.DatabaseClick = 0;
+                Utility.EmailClick = 0;
+            }
         }
 
         private void Home_Click(object sender, EventArgs e)
         {
-            
-            ControlPanel.Controls.Clear();
-            Dashboard _formPreview = new Dashboard();
-            _formPreview.TopLevel = false;
-            ControlPanel.Controls.Add(_formPreview);
-            _formPreview.Dock = DockStyle.Fill;
-            _formPreview.Show();
+            if (Utility.HomeClick == 0)
+            {
+                ControlPanel.Controls.Clear();
+                Dashboard _formPreview = new Dashboard();
+                _formPreview.TopLevel = false;
+                ControlPanel.Controls.Add(_formPreview);
+                _formPreview.Dock = DockStyle.Fill;
+                _formPreview.Show();
+                Utility.PerformanceClick = 0;
+                Utility.HomeClick = 1;
+                Utility.EmailClick = 0;
+                Utility.DatabaseClick = 0;
+            }
         }
 
         private void Core_Load(object sender, EventArgs e)
         {
-            //MailProcess Atlas = new MailProcess();
             ControlPanel.Controls.Clear();
             Dashboard _formPreview = new Dashboard();
             _formPreview.TopLevel = false;
             ControlPanel.Controls.Add(_formPreview);
             _formPreview.Dock = DockStyle.Fill;
             _formPreview.Show();
-            if(Utility.Atlas_Function == 0)
+            if (Utility.Atlas_Function == 0)
             {
                 Atlas();
                 Utility.Atlas_Function = 1;
             }
-            if(Utility.Juno_Function == 0)
+            if (Utility.Juno_Function == 0)
             {
                 Juno();
                 Utility.Juno_Function = 1;
-            } 
+            }
         }
 
         public void Juno()
@@ -100,22 +106,36 @@ namespace ServerPlus
 
         private void EmailButton_Click(object sender, EventArgs e)
         {
-            ControlPanel.Controls.Clear();
-            MailServer _formPreview = new MailServer();
-            _formPreview.TopLevel = false;
-            ControlPanel.Controls.Add(_formPreview);
-            _formPreview.Dock = DockStyle.Fill;
-            _formPreview.Show();
+            if (Utility.EmailClick == 0)
+            {
+                ControlPanel.Controls.Clear();
+                MailServer _formPreview = new MailServer();
+                _formPreview.TopLevel = false;
+                ControlPanel.Controls.Add(_formPreview);
+                _formPreview.Dock = DockStyle.Fill;
+                _formPreview.Show();
+                Utility.PerformanceClick = 0;
+                Utility.EmailClick = 1;
+                Utility.HomeClick = 0;
+                Utility.DatabaseClick = 0;
+            }
         }
 
         private void DatabaseButton_Click(object sender, EventArgs e)
         {
-            ControlPanel.Controls.Clear();
-            DatabaseServer _formPreview = new DatabaseServer();
-            _formPreview.TopLevel = false;
-            ControlPanel.Controls.Add(_formPreview);
-            _formPreview.Dock = DockStyle.Fill;
-            _formPreview.Show();
+            if (Utility.DatabaseClick == 0)
+            {
+                ControlPanel.Controls.Clear();
+                DatabaseServer _formPreview = new DatabaseServer();
+                _formPreview.TopLevel = false;
+                ControlPanel.Controls.Add(_formPreview);
+                _formPreview.Dock = DockStyle.Fill;
+                _formPreview.Show();
+                Utility.PerformanceClick = 0;
+                Utility.DatabaseClick = 1;
+                Utility.HomeClick = 0;
+                Utility.EmailClick = 0;
+            }
         }
     }
 }

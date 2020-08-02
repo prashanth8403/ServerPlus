@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Performance));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.CPUProgress = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.DataProgress = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.MemoryProgress = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.BandProgress = new Bunifu.Framework.UI.BunifuCircleProgressbar();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -54,8 +50,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
@@ -68,70 +62,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1058, 2);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(67, 663);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 116);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(306, 663);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(109, 116);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // CPUProgress
-            // 
-            this.CPUProgress.animated = false;
-            this.CPUProgress.animationIterval = 5;
-            this.CPUProgress.animationSpeed = 300;
-            this.CPUProgress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.CPUProgress.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CPUProgress.BackgroundImage")));
-            this.CPUProgress.Font = new System.Drawing.Font("Roboto Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPUProgress.ForeColor = System.Drawing.Color.Yellow;
-            this.CPUProgress.LabelVisible = true;
-            this.CPUProgress.LineProgressThickness = 10;
-            this.CPUProgress.LineThickness = 1;
-            this.CPUProgress.Location = new System.Drawing.Point(163, 663);
-            this.CPUProgress.Margin = new System.Windows.Forms.Padding(10);
-            this.CPUProgress.MaxValue = 100;
-            this.CPUProgress.Name = "CPUProgress";
-            this.CPUProgress.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.CPUProgress.ProgressColor = System.Drawing.Color.Yellow;
-            this.CPUProgress.Size = new System.Drawing.Size(115, 115);
-            this.CPUProgress.TabIndex = 4;
-            this.CPUProgress.Value = 100;
-            // 
-            // DataProgress
-            // 
-            this.DataProgress.animated = false;
-            this.DataProgress.animationIterval = 5;
-            this.DataProgress.animationSpeed = 300;
-            this.DataProgress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.DataProgress.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DataProgress.BackgroundImage")));
-            this.DataProgress.Font = new System.Drawing.Font("Roboto Light", 13.8F);
-            this.DataProgress.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.DataProgress.LabelVisible = true;
-            this.DataProgress.LineProgressThickness = 10;
-            this.DataProgress.LineThickness = 1;
-            this.DataProgress.Location = new System.Drawing.Point(404, 663);
-            this.DataProgress.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.DataProgress.MaxValue = 100;
-            this.DataProgress.Name = "DataProgress";
-            this.DataProgress.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.DataProgress.ProgressColor = System.Drawing.Color.DodgerBlue;
-            this.DataProgress.Size = new System.Drawing.Size(115, 115);
-            this.DataProgress.TabIndex = 5;
-            this.DataProgress.Value = 100;
             // 
             // MemoryProgress
             // 
@@ -375,10 +305,6 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.BandProgress);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.DataProgress);
-            this.Controls.Add(this.CPUProgress);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -387,8 +313,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Performance";
             this.Load += new System.EventHandler(this.Performance_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -400,10 +324,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar CPUProgress;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar DataProgress;
         private Bunifu.Framework.UI.BunifuCircleProgressbar MemoryProgress;
         private Bunifu.Framework.UI.BunifuCircleProgressbar BandProgress;
         private System.Windows.Forms.PictureBox pictureBox4;

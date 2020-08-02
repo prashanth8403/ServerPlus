@@ -36,7 +36,7 @@
     <StartupObject />
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>FontAwesome_f168%280%29.ico</ApplicationIcon>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu.Core">
@@ -94,8 +94,12 @@
     <Compile Include="Performance.Designer.cs">
       <DependentUpon>Performance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Process.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerModule\DataServer.cs" />
+    <Compile Include="ServerModule\MailServer.cs" />
+    <Compile Include="ServerModule\ServerSocket.cs" />
     <Compile Include="Utility.cs" />
     <EmbeddedResource Include="Core.resx">
       <DependentUpon>Core.cs</DependentUpon>
@@ -135,7 +139,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FontAwesome_f168%280%29.ico" />
+    <Content Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataModule\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

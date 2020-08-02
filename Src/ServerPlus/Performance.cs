@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using Bunifu.DataViz.WinForms;
@@ -14,10 +9,7 @@ namespace ServerPlus
 {
     public partial class Performance : Form
     {
-        static int Cpu_Progress = 0;
-        static int Data_Progress = 0;
-        static int Band_Progress = 0;
-        static int Memory_progress = 0;
+        
         int[,] ReqsGraph = new int[4, 12];
         public int Cur_MailReq { get; set; }
         public int Cur_FacialReg { get; set; }
@@ -35,54 +27,22 @@ namespace ServerPlus
 
         private void Process_Tick(object sender, EventArgs e)
         {
-
-            Thread _cputhread = new Thread(CPU_Performance);
-            Thread _memorythread = new Thread(Memory_Performance);
-            Thread _datathread = new Thread(Data_Performance);
-            Thread _bandthread = new Thread(Band_Performance);
-
-            _cputhread.Start();
-            _memorythread.Start();
-            _datathread.Start();
-            _bandthread.Start();
-
-            DataProgress.Value = Data_Progress;
-            BandProgress.Value = Band_Progress;
-            MemoryProgress.Value = Memory_progress;
-            CPUProgress.Value = Cpu_Progress;
         }
 
         private void Data_Performance()
         {
-            System.Threading.Thread.Sleep(2500);
-            Random DataGenerator = new Random();
-            Data_Progress = DataGenerator.Next(4, 17);
+           /*
+            * Network Data
+            */
         }
 
         private void Band_Performance()
         {
-            System.Threading.Thread.Sleep(1300);
-            Random BandGenerator = new Random();
-            Band_Progress = BandGenerator.Next(2, 23);
+            /*
+             * ThroughPut Data
+             */
         }
-
-        private void Memory_Performance()
-        {
-            System.Threading.Thread.Sleep(1000);
-            PerformanceCounter _memory = new PerformanceCounter("Memory", "Available MBytes");
-            Memory_progress = Convert.ToInt32(((8000.00 - _memory.NextValue()) / 8000.00) * 100);
-        }
-
-        private void CPU_Performance()
-        {
-            PerformanceCounter CPU = new PerformanceCounter();
-            CPU.CategoryName = "Processor";
-            CPU.CounterName = "% Processor Time";
-            CPU.InstanceName = "_Total";
-            var Dummy = CPU.NextValue();
-            System.Threading.Thread.Sleep(1000);
-            Cpu_Progress = Convert.ToInt32(CPU.NextValue());
-        }
+       
 
         private void Performance_Load(object sender, EventArgs e)
         {

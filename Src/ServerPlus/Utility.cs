@@ -16,6 +16,11 @@ namespace ServerPlus
         public static int text { get; set; }
         public static int Juno_Function { get; set; } = 0;
         public static int Atlas_Function { get; set; } = 0;
+        public static int HomeClick { get; set; } = 0;
+        public static int DatabaseClick { get; set; } = 0;
+        public static int PerformanceClick { get; set; } = 0;
+        public static int EmailClick { get; set; } = 0;
+        public static int DashboardLoad { get; set; } = 0;
 
         public static int Mail()
         {
