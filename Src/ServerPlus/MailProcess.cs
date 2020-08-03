@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net.Sockets;
 using System.Net;
 using System.Text;
@@ -10,6 +10,8 @@ namespace ServerPlus
     class MailProcess
     {
         const int PORT_NO = 5030;
+        
+        // This is a static private IP, use 'ipconfig' to find your static IP
         const string SERVER_IP = "192.168.43.25";
         static string MailReceived;
 
@@ -44,16 +46,26 @@ namespace ServerPlus
                 string[] EmailContent = MailReceived.Split('`');
                 MailMessage mail = new MailMessage();
                 mail.To.Add(EmailContent[0]);
-                mail.From = new MailAddress("prashanth7514@gmail.com");
+                
+                // Add your mail Address : 
+                mail.From = new MailAddress("<Mail Address>");
                 mail.Subject = EmailContent[1];
                 string Body = EmailContent[2];
                 mail.Body = Body;
                 SmtpClient smtp = new SmtpClient();
-                smtp.Host = "smtp.gmail.com";
-                smtp.Port = 587;
+                
+                
+                /*
+                    Add SMTP host here
+                    
+                    eg. smtp.gmail.com
+                */
+                
+                smtp.Host = "<smtp host>";
+                smtp.Port = <stmp port>;
                 smtp.UseDefaultCredentials = false;
-                string u = "prashanth7514@gmail.com", v = "Hunter21#";
-                smtp.Credentials = new System.Net.NetworkCredential(u, v);
+                
+                smtp.Credentials = new System.Net.NetworkCredential("<Email ID>", "<Password>">);
                 smtp.EnableSsl = true;
                 smtp.Send(mail);
                 Utility.mail++;
